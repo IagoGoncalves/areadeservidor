@@ -1,0 +1,1316 @@
+// ==========================================================================
+// Theme Style Main
+// ==========================================================================
+
+/*!
+Theme Name: Odin
+Author URI: http://wpod.in/
+Description: Odin main stylesheet.
+Author: the Odin team
+Author URI: http://wpod.in/#colaboradores
+*/
+
+@import
+        "variables",           // Theme       Custom Variables
+        "bootstrap/bootstrap", // Bootstrap   Styles Core
+        "wordpress/wordpress", // WordPress   Styles Core
+        //"woocommerce",       // WooCommerce Styles Core
+        "odin/core",           // Odin        Styles Core
+        "layout",               // Theme       Custom Layout
+        url('https://fonts.googleapis.com/css?family=Open+Sans:700');
+main{
+	outline: -webkit-focus-ring-color auto 0px !important;
+}
+.formularios {
+	text-align: center;
+	text-align: center;
+	padding: 80px 0px;
+	border: 2px solid #045830;
+	border-radius: 20px;
+	margin-top: 100px;
+   .btn-atos-oficiais {
+      @extend .col-md-5;
+      display: inline-block;
+      float: none;
+      a {
+         position: relative;
+         background-size: cover;
+         padding: 140px 0px;
+         display: block;
+         border-radius: 20px;
+         text-decoration: none;
+         transition: .2s linear;
+         overflow: hidden;
+         .fundo {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transition: all 1.2s cubic-bezier(.190, 1.000, .220, 1.000);
+         }
+         .titulo{
+         	margin-top: 40px;
+         	p{
+         		margin: 0;
+         		line-height: 1;
+         	}
+         }
+         &:hover {
+            //transform: scale(1.05) translateY(-10px);
+            //box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.4);
+
+            .fundo {
+               transform: scale(1.2);
+   			}
+         }
+      }
+      p {
+         font-size: 38px;
+         font-family: 300;
+         font-weight: 600;
+         color: #fff;
+         span { font-weight: 600; }
+      }
+      //.btn-atos-executivo { background: url(../images/fundo-btn-executivo.png) no-repeat; }
+      //.btn-atos-legislativo { background: url(../images/fundo-btn-legislativo.png) no-repeat; }
+   }
+}
+
+h1{
+	text-transform: uppercase;
+	color: #045830;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	width: 30%;
+}
+h2{
+	text-transform: uppercase;
+	color: #045830;
+	font-family: 'Open Sans';
+	font-weight: bold;
+	color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #045830;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+}
+label{
+	text-transform: uppercase;
+	display: block;
+	font-size: 10px;
+	color: #045830;
+	font-family: 'Open Sans';
+}
+input{
+	background: #e0e0e0;	
+}
+
+textarea{
+	background: #e0e0e0;
+	border: 1px solid #000;
+	width: 100%;
+	font-size: 12px;
+}
+.texto-input{
+	border: 1px solid #000;
+	padding-left: 5px;
+	height: 40px;
+	width:100%;
+}
+
+.formulario-viagem{
+	.logo-camara-preto{
+		margin-left: 50%;
+    	transform: translateX(-50%);
+	    margin-bottom: 20px;
+	    margin-top: 10px;
+	    z-index: 98;
+	}
+	input[type="radio"], input[type="checkbox"] {
+    	margin: 0px 0 0;
+	}
+	.titulo-principal{
+		display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	    margin: 0px 20px;
+	    border-bottom: 2px solid #000;
+	    padding-bottom: 10px;
+	    h2{
+	    	padding: 10px 60px;
+	    }
+	}
+	form{
+		border: 2px solid #000;
+   		border-radius: 10px;
+    	padding-bottom: 30px;
+    	margin-top: 20px;
+    	margin-bottom:5px;
+    	height: 200px;
+    	z-index: 999;
+    	.titulo-caixas{
+    		@extend .col-md-12;
+    		h2{
+    			padding-bottom: 6px;
+			    padding-top: 6px;
+			    margin-top: -1px;
+    		}
+    	}
+    	.input-label{
+			margin-bottom: 20px;
+		}  	
+	}
+	.caixa-principal{
+		padding-top: 30px;
+		.matricula{
+			width: 11%;
+    		float: left;
+    		margin-right: 2%;
+		}
+		.nome{
+			width: 45%;
+    		float: left;
+    		margin-right: 2%;
+		}
+		.cargo{
+			width: 40%;
+    		float: right;
+		}
+		.destino{
+			width: 40%;
+    		float: left;
+    		margin-right: 2%;
+    		label{
+    			width:100%;
+    		}
+		}
+		.distancia{
+			width: 45%;
+    		float: left;
+		}
+	}
+	.caixa-periodo{
+		height:130px;
+		h2{
+			width: 25%;
+		}
+		.input-label{
+			width:23%;
+			float: left;
+		}
+		.hora{
+			margin-right: 2%;
+		}
+		.data{
+			margin-right: 2%;
+		}
+		.titulo-prevista{
+			font-size: 9px;
+		}
+		.titulo-requerimento{
+			width: 100%;
+		}
+	}
+	.caixa-gasto{
+		height: 145px;
+		.input-label{
+			margin-bottom: 5px;
+			float: left;
+			margin-right: 20px;
+		}
+		label{
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
+		} 	
+		h2{
+			width: 45%;
+		}
+		.sim{
+			margin-left: 5px;
+			margin-right: 2px;
+		}
+		.nao{
+			margin-left: 5px;
+			margin-right: 2px;
+		}
+		.barra-input{
+			width: 80%;
+			.pernoite{
+				display: inherit !important;
+			}
+		}	
+	}
+	.caixa-transporte{
+		height: 80px;
+		.input-label{
+			margin-bottom: 5px;
+			float: left;
+			margin-right: 20px;
+		}
+		label{
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
+		} 	
+		h2{
+			width: 60%;
+		}
+		.sim{
+			margin-left: 5px;
+			margin-right: 2px;
+		}
+		.nao{
+			margin-left: 5px;
+			margin-right: 2px;
+		}
+	}
+	.caixa-justificativa-viagem{
+		height: 180px;
+		margin-bottom: 60px;
+		h2{
+			width: 50%;
+		}
+		textarea{
+			height: 130px;
+		}
+	}
+	.caixa-requerimento{
+		height:150px;
+		h2{
+			width: 40%;
+		}
+		.input-label{
+			float: left;
+		}
+		.assinatura{
+			width: 70%;
+			margin-right: 2%;
+		}
+		.data{
+			width: 25%;
+			margin-right: 2%;
+		}
+		.titulo-prevista{
+			font-size: 9px;
+		}
+		.titulo-requerimento{
+			width: 100%;
+		}
+	}
+	.caixa-requerimento-adiantamento {
+		height:150px;
+		h2{
+			width: 70%;
+		}
+		.input-label{
+			float: left;
+		}
+		.reais{
+			width: 20%;
+    		margin-right: 2%;
+		}
+		.data{
+			width: 20%;
+			margin-right: 2%;
+		}
+		.assinatura{
+			width: 54%;
+			margin-right: 2%;
+		}
+		.titulo-prevista{
+			font-size: 9px;
+		}
+		.titulo-requerimento{
+			width: 100%;
+		}
+	}
+	.caixa-autorizacao-chefe{
+		height: 235px;
+		h2{
+			width: 50%;
+		}
+		textarea{
+			height: 60px;
+			
+		}
+		.mensagem{
+			width: 100%;
+		}
+		.input-label{
+			float: left;
+		}
+		.assinatura{
+			width: 70%;
+			margin-right: 2%;
+		}
+		.data{
+			width: 28%;
+		}
+	}
+	.caixa-controle{
+		height:280px;
+		margin-bottom: 60px;
+		.checkbox-controle{
+			width:100%;
+			margin-bottom: 0px;
+			margin-right:10px
+		}
+		.controle1{
+			.sim{
+				margin-left:5%;
+			}
+		}
+		.controle2{
+			.sim{
+				margin-left: 15.4%;
+			}
+			margin-bottom:20px;
+		}
+		h2{
+			width: 50%;
+		}
+		textarea{
+			height: 60px;		
+		}
+		.mensagem{
+			width: 100%;
+		}
+		.input-label{
+			float: left;
+		}
+		.assinatura{
+			width: 70%;
+			margin-right: 2%;
+		}
+		.data{
+			width: 28%;
+		}
+	}
+	.caixa-autorizacao-presidencia{
+		height:320px;
+		.input-label {
+			margin-bottom: 10px;
+		}
+		.checkbox-controle{
+			width: 30%;
+			margin-top: 10px;
+			margin-bottom: 0px !important;
+			margin-right: 10px;
+		}
+		.controle1{
+			.sim{
+				margin-left:5%;
+			}
+		}
+		.controle2{
+			.sim{
+				margin-left:11%;
+			}
+			margin-bottom:20px;
+		}
+		h2{
+			width: 50%;
+		}
+		.mensagem{
+			width: 100%;
+			textarea{
+				height: 60px !important;
+			}
+		}
+		.carimbo{
+			width: 70%;
+			margin-right: 2%;
+			textarea{
+				height: 100px !important;
+			}
+		}
+		.input-label{
+			float: left;
+		}
+		.data1{
+		    width: 28%;
+		    display: flex;
+		    align-items: center;
+		    label{
+		    	margin-right:5px;
+		    }
+		}
+		.data2{
+			width: 28%;
+		}
+	}
+	.caixa-diretor{
+		height: 460px;
+		.total{
+			width:60%;
+		}
+	}
+}
+
+.formulario-concessao{
+	.logo-camara-preto{
+		margin-left: 50%;
+    	transform: translateX(-50%);
+	    margin-bottom: 20px;
+	    margin-top: 10px;
+	    z-index: 98;
+	}
+	input[type="radio"], input[type="checkbox"] {
+    	margin: 0px 0 0;
+	}
+	
+	.titulo-principal{
+		display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	    margin: 0px 20px;
+	    border-bottom: 2px solid #000;
+	    padding-bottom: 10px;
+	    h2{
+	    	padding: 10px 40px;
+	    }
+	}
+	form{
+		border: 2px solid #000;
+   		border-radius: 10px;
+    	padding-bottom: 30px;
+    	margin-top: 20px;
+    	margin-bottom:5px;
+    	height: 200px;
+    	z-index: 999;
+    	.titulo-caixas{
+    		@extend .col-md-12;
+    		h2{
+    			padding-bottom: 6px;
+			    padding-top: 6px;
+			    margin-top: -1px;
+    		}
+    	}
+    	.input-label{
+			margin-bottom: 20px;
+		}  	
+	}
+	.caixa-principal{
+		padding-top: 30px;
+		.nome{
+			width: 58%;
+    		float: left;
+		}
+		.cargo{
+			width: 40%;
+    		float: right;
+		}
+		.destino{
+			width: 40%;
+    		float: left;
+    		margin-right: 2%;
+    		label{
+    			width:100%;
+    		}
+		}
+		.distancia{
+			width: 45%;
+    		float: left;
+		}
+	}
+	.caixa-periodo{
+		height:130px;
+		h2{
+			width: 25%;
+		}
+		.input-label{
+			width:23%;
+			float: left;
+		}
+		.hora{
+			margin-right: 2%;
+		}
+		.data{
+			margin-right: 2%;
+		}
+		.titulo-prevista{
+			font-size: 9px;
+		}
+		.titulo-requerimento{
+			width: 100%;
+		}
+	}
+	.caixa-transporte{
+		height: 140px;
+		.input-label{
+			margin-bottom: 5px;
+			float: left;
+			margin-right: 20px;
+		}
+		label{
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
+		} 	
+		h2{
+			width: 60%;
+		}
+		.sim{
+			margin-left: 5px;
+			margin-right: 2px;
+		}
+		.nao{
+			margin-left: 5px;
+			margin-right: 2px;
+		}
+		.mensagem{
+			width: 100%;
+		}
+		textarea{
+			height: 60px;
+		}
+	}
+	.caixa-justificativa-viagem{
+		height: 270px;
+		margin-bottom: 100px;
+		h2{
+			width: 70%;
+		}
+		textarea{
+			height: 205px;
+		}
+	}
+	.caixa-recursos{
+		height: 470px;
+		.discriminacao-valores{
+			width: 22.5%;
+			float: left;
+    		margin-right: 2%;
+		}
+		.estacionamento{
+			width: 30%;
+			float: left;
+			margin-right: 2%;
+		}
+		.consertos{
+			width: 30%;
+			float: left;
+			margin-right:36%;
+		}
+		.titulo-valor-total{
+			width:100%;
+		}
+		.texto{
+			margin-bottom:10px;
+		}
+	}
+	.caixa-controle{
+		
+		.input-label {
+		    margin-bottom: 12px;
+		}
+		h2{
+			width: 25%;
+		}
+		span{
+			font-size: 12px;
+			color: #045830;
+			font-family: 'Open Sans';
+		}		
+		textarea{
+			height:60px;
+		}
+		.documento-controle{
+			span{
+				margin-left:20px;
+			}
+			.aprovacao{
+				margin-left:0px;
+			}
+		}
+		.assinatura{
+			width: 70%;
+			margin-right: 2%;
+			float: left;
+		}
+		.data{
+			width: 28%;
+			float: left;
+		}
+	}
+	.controle1{
+		height: 430px;
+	}
+
+	.controle2{
+		height: 290px;
+	}
+	.caixa-pretacao{
+		    height: 340px;
+		span{
+			font-size: 12px;
+			color: #045830;
+			font-family: 'Open Sans';
+		}		
+		textarea{
+			height:60px;
+		}
+		.carimbo{
+			width: 70%;
+			margin-right: 2%;
+			float: left;
+			textarea{
+				height: 100px !important;
+			}
+		}
+		.data2{
+			width: 28%;
+			float: left;
+		}
+	}
+}
+
+.anexo1{
+	.logo-camara-preto{
+		margin-left: 50%;
+    	transform: translateX(-50%);
+	    margin-bottom: 0px;
+	    margin-top: 10px;
+	    z-index: 98;
+	}
+	input[type="radio"], input[type="checkbox"] {
+    	margin: 0px 0 0;
+	}
+	.titulo-principal{
+		display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	    margin: 0px 20px;
+	    border-bottom: 2px solid #000;
+	    padding-bottom: 10px;
+	    h1{
+	    	@extend .col-md-2;
+	    	span{
+	    		margin-left: 5px;
+	    	}
+	    }
+	    h2{
+	    	@extend .col-md-4;
+	    	padding-top: 10px;
+	    	padding-bottom: 10px;
+	    }
+	    .box-recebimento{
+	    	@extend .col-md-6;
+	    	border: 1px solid #000;
+	    	margin-left: 5px;
+	    	p{
+	    		font-size: 13px;
+	    	}
+	    }
+	}
+	form{
+		border: 2px solid #000;
+   	border-radius: 10px;
+    	padding-bottom: 30px;
+    	margin-top: 10px;
+    	margin-bottom:5px;
+    	height: 200px;
+    	z-index: 999;
+    	.titulo-caixas{
+    		@extend .col-md-12;
+    		h2{
+    			padding-bottom: 6px;
+			    padding-top: 6px;
+			    margin-top: -1px;
+    		}
+    	}
+    	.input-label{
+			margin-bottom: 5px;
+		}  	
+	}
+	.caixa-principal{
+		height: 155px;
+		padding-top: 10px;
+		.matricula{
+			width: 11%;
+    		float: left;
+    		margin-right: 2%;
+		}
+		.nome{
+			width: 45%;
+    		float: left;
+    		margin-right: 2%;
+		}
+		.cargo{
+			width: 40%;
+    		float: right;
+		}
+		.destino{
+			width: 40%;
+    		float: left;
+    		margin-right: 2%;
+    		label{
+    			width:100%;
+    		}
+		}
+		.distancia{
+			width: 45%;
+    		float: left;
+		}
+	}
+	.caixa-periodo{
+		height:130px;
+		h2{
+			width: 25%;
+		}
+		.input-label{
+			width:23%;
+			float: left;
+		}
+		.hora{
+			margin-right: 2%;
+		}
+		.data{
+			margin-right: 2%;
+		}
+		.titulo-prevista{
+			font-size: 9px;
+		}
+		.titulo-requerimento{
+			width: 100%;
+		}
+	}
+	.caixa-gasto{
+		height: 135px;
+		.input-label{
+			margin-bottom: 5px;
+			float: left;
+			margin-right: 20px;
+		}
+		label{
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
+		} 	
+		h2{
+			width: 45%;
+		}
+		.sim{
+			margin-left: 5px;
+			margin-right: 2px;
+		}
+		.nao{
+			margin-left: 5px;
+			margin-right: 2px;
+		}
+		.barra-input{
+			width: 80%;
+			.pernoite{
+				display: inherit !important;
+			}
+		}	
+	}
+	.caixa-transporte{
+		height: 180px;
+		.input-label{
+			margin-bottom: 5px;
+			float: left;
+			margin-right: 10px;
+		}
+		label{
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
+		} 	
+		h2{
+			width: 60%;
+		}
+		.sim{
+			margin-left: 5px;
+			margin-right: 2px;
+		}
+		.nao{
+			margin-left: 5px;
+			margin-right: 2px;
+		}
+		.texto-obs{
+			width: 100%;
+			p{
+				text-transform: uppercase;
+				display: block;
+				font-size: 10px;
+				color: #045830;
+				font-family: 'Open Sans';
+				margin: 5px 0;
+			}
+		}
+	}
+	.caixa-justificativa-viagem{
+		height: 180px;
+		margin-bottom: 60px;
+		h2{
+			width: 50%;
+		}
+		textarea{
+			height: 130px;
+		}
+	}
+	.dinheiro-transporte{
+		text-transform: uppercase;
+		display: block;
+		font-size: 10px;
+		color: #045830;
+		font-family: 'Open Sans';
+		margin: 0px;
+	}
+	.caixa-requerimento{
+		height:150px;
+		margin-top: 0;
+		margin-bottom: 20px;
+		h2{
+			width: 40%;
+		}
+		.input-label{
+			float: left;
+		}
+		.assinatura{
+			width: 70%;
+			margin-right: 2%;
+		}
+		.data{
+			width: 25%;
+			margin-right: 2%;
+		}
+		.titulo-prevista{
+			font-size: 9px;
+		}
+		.titulo-requerimento{
+			width: 100%;
+		}
+	}
+	.caixa-requerimento-adiantamento {
+		height:150px;
+		margin-top: 5px;
+		h2{
+			width: 70%;
+		}
+		.input-label{
+			float: left;
+		}
+		.reais{
+			width: 20%;
+    		margin-right: 2%;
+		}
+		.data{
+			width: 20%;
+			margin-right: 2%;
+		}
+		.assinatura{
+			width: 54%;
+			margin-right: 2%;
+		}
+		.titulo-prevista{
+			font-size: 9px;
+		}
+		.titulo-requerimento{
+			width: 100%;
+		}
+	}
+	.caixa-autorizacao-chefe{
+		height: 235px;
+		h2{
+			width: 50%;
+		}
+		textarea{
+			height: 70px;
+		}
+		.mensagem{
+			width: 100%;
+		}
+		.input-label{
+			float: left;
+		}
+		.assinatura{
+			width: 70%;
+			margin-right: 2%;
+		}
+		.data{
+			width: 28%;
+		}
+	}
+	.caixa-controle{
+		height:290px;
+		margin-bottom: 60px;
+		.checkbox-controle{
+			width:100%;
+			margin-bottom: 0px;
+			margin-right:10px
+		}
+		.controle1{
+			.sim{
+				margin-left:5%;
+			}
+		}
+		.controle2{
+			.sim{
+				margin-left: 15.4%;
+			}
+			margin-bottom:20px;
+		}
+		h2{
+			width: 50%;
+		}
+		textarea{
+			height: 70px;		
+		}
+		.mensagem{
+			width: 100%;
+		}
+		.input-label{
+			float: left;
+		}
+		.assinatura{
+			width: 70%;
+			margin-right: 2%;
+		}
+		.data{
+			width: 28%;
+		}
+	}
+	.caixa-autorizacao-presidencia{
+		height:320px;
+		.input-label {
+			margin-bottom: 10px;
+		}
+		.checkbox-controle{
+			width: 30%;
+			margin-top: 10px;
+			margin-bottom: 0px !important;
+			margin-right: 10px;
+		}
+		.controle1{
+			.sim{
+				margin-left:5%;
+			}
+		}
+		.controle2{
+			.sim{
+				margin-left:11%;
+			}
+			margin-bottom:20px;
+		}
+		h2{
+			width: 50%;
+		}
+		.mensagem{
+			width: 100%;
+			textarea{
+				height: 70px !important;
+			}
+		}
+		.carimbo{
+			width: 70%;
+			margin-right: 2%;
+			textarea{
+				height: 100px !important;
+			}
+		}
+		.input-label{
+			float: left;
+		}
+		.data1{
+		    width: 28%;
+		    display: flex;
+		    align-items: center;
+		    label{
+		    	margin-right:5px;
+		    }
+		}
+		.data2{
+			width: 28%;
+			p{
+				text-transform: uppercase;
+				display: block;
+				color: #045830;
+				font-family: 'Open Sans';
+			}
+		}
+	}
+	.caixa-diretor{
+		height: 480px;
+		.total{
+			width:60%;
+		}
+	}
+}
+
+.anexo2{
+	.logo-camara-preto{
+		margin-left: 50%;
+    	transform: translateX(-50%);
+	    margin-bottom: 20px;
+	    margin-top: 10px;
+	    z-index: 98;
+	}
+	input[type="radio"], input[type="checkbox"] {
+    	margin: 0px 0 0;
+	}
+	
+	.titulo-principal{
+		display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	    margin: 0px 20px;
+	    border-bottom: 2px solid #000;
+	    padding-bottom: 10px;
+	    h1{
+	    	@extend .col-md-2;
+	    	span{
+	    		margin-left: 5px;
+	    	}
+	    }
+	    h2{
+	    	@extend .col-md-4;
+	    	padding-top: 10px;
+	    	padding-bottom: 10px;
+	    }
+	    .box-recebimento{
+	    	@extend .col-md-6;
+	    	border: 1px solid #000;
+	    	margin-left: 5px;
+	    	p{
+	    		font-size: 13px;
+	    	}
+	    }
+	}
+	form{
+		border: 2px solid #000;
+   		border-radius: 10px;
+    	padding-bottom: 30px;
+    	margin-top: 20px;
+    	margin-bottom:5px;
+    	height: 200px;
+    	z-index: 999;
+    	.titulo-caixas{
+    		@extend .col-md-12;
+    		h2{
+    			padding-bottom: 6px;
+			    padding-top: 6px;
+			    margin-top: -1px;
+    		}
+    	}
+    	.input-label{
+			margin-bottom: 20px;
+		}  	
+	}
+	.caixa-principal{
+		padding-top: 30px;
+		.nome{
+			width: 58%;
+    		float: left;
+		}
+		.cargo{
+			width: 40%;
+    		float: right;
+		}
+		.destino{
+			width: 40%;
+    		float: left;
+    		margin-right: 2%;
+    		label{
+    			width:100%;
+    		}
+		}
+		.distancia{
+			width: 45%;
+    		float: left;
+		}
+	}
+	.caixa-periodo{
+		height:130px;
+		h2{
+			width: 25%;
+		}
+		.input-label{
+			width:23%;
+			float: left;
+		}
+		.hora{
+			margin-right: 2%;
+		}
+		.data{
+			margin-right: 2%;
+		}
+		.titulo-prevista{
+			font-size: 9px;
+		}
+		.titulo-requerimento{
+			width: 100%;
+		}
+	}
+	.caixa-transporte{
+		height: 140px;
+		margin-bottom: 220px;
+		.input-label{
+			margin-bottom: 5px;
+			float: left;
+			margin-right: 20px;
+		}
+		label{
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
+		} 	
+		h2{
+			width: 60%;
+		}
+		.sim{
+			margin-left: 5px;
+			margin-right: 2px;
+		}
+		.nao{
+			margin-left: 5px;
+			margin-right: 2px;
+		}
+		.utilizacao{
+			width: 100%;
+			label{
+				display: block;
+			}
+		}
+		textarea{
+			height: 60px;
+		}
+	}
+	
+	.caixa-recursos{
+		height: 470px;
+		.discriminacao-valores{
+			width: 22.5%;
+			float: left;
+    		margin-right: 2%;
+		}
+		.estacionamento{
+			width: 30%;
+			float: left;
+			margin-right: 2%;
+		}
+		.consertos{
+			width: 30%;
+			float: left;
+			margin-right:36%;
+		}
+		.titulo-valor-total{
+			width:100%;
+		}
+		.texto{
+			margin-bottom:10px;
+		}
+	}
+
+	.caixa-controle{
+		
+		.input-label {
+		    margin-bottom: 12px;
+		}
+		h2{
+			width: 40%;
+		}
+		span{
+			font-size: 12px;
+			color: #045830;
+			font-family: 'Open Sans';
+		}		
+		textarea{
+			height:60px;
+		}
+		.documento-controle{
+			span{
+				margin-left:20px;
+			}
+			.aprovacao{
+				margin-left:0px;
+			}
+		}
+		.assinatura{
+			width: 70%;
+			margin-right: 2%;
+			float: left;
+		}
+		.data{
+			width: 28%;
+			float: left;
+		}
+	}
+
+	.controle1{
+		height: 430px;
+	}
+
+	.caixa-justificativa-viagem{
+		height: 400px;
+		h2{
+			width: 70%;
+		}
+		textarea{
+			height: 330px;
+		}
+		.box-assinatura{
+			margin-top: -55px;
+			margin-left: 60%;
+			text-align: center;
+			p{
+				margin: 0;
+				color: #045830;
+			}
+		}   
+	}
+	.caixa-pretacao{
+		height: 400px;
+		span{
+			font-size: 12px;
+			color: #045830;
+			font-family: 'Open Sans';
+		}		
+		textarea{
+			height:100px;
+		}
+		.carimbo{
+			width: 70%;
+			margin-right: 2%;
+			float: left;
+			textarea{
+				height: 100px !important;
+			}
+		}
+		.data2{
+			width: 28%;
+			float: left;
+			p{
+				text-transform: uppercase;
+				display: block;
+				color: #045830;
+				font-family: 'Open Sans';
+			}
+		}
+	}
+}
+
+button{
+	background-color: #045830;
+	color: #fff;
+	border-radius: 0px;
+	padding: 10px 60px;
+	border: none;
+	margin-bottom: 10px;
+	font-size: 15px;
+	transition: all .4s;
+	float: left;
+	font-weight: bold;
+	&:hover {
+		transition: all .4s;
+		box-shadow: 2px 2px 7px -1px rgba(119,119,119,0.8);
+		background: #18b269;
+		color: #fff;
+	}
+}
